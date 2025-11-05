@@ -5,7 +5,7 @@
   "height": 520,
 
   "data": {
-    "url": "data/LGA_2021_AUST_GDA2020.json",
+    "url": "LGA_2021_AUST_GDA2020.json",
     "format": { "type": "topojson", "feature": "LGA_2021_AUST_GDA2020-1" }
   },
 
@@ -19,7 +19,7 @@
     {
       "lookup": "lga_join",
       "from": {
-        "data": { "url": "data/metric.csv", "format": { "type": "csv" } },
+        "data": { "url": "metric.csv", "format": { "type": "csv" } },
         "key": "NAME",
         "fields": ["year", "hot_days", "elderly_share", "state"]
       }
