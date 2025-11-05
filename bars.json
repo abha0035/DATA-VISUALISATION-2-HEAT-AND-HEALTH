@@ -3,7 +3,7 @@
   "description": "Top/bottom LGAs in 2024; toggle between Hot Days and Heat Risk Index.",
   "width": 720,
   "height": 340,
-  "data": { "url": "data/metric.csv", "format": { "type": "csv" } },
+  "data": { "url": "metric.csv", "format": { "type": "csv" } },
 
   "params": [
     {
@@ -40,20 +40,13 @@
 
   "encoding": {
     "y": { "field": "NAME", "type": "nominal", "sort": "-x", "title": "LGA" },
-
-    "x": {
-      "field": "metric_value",
-      "type": "quantitative",
-      "title": "Selected metric"
-    },
-
+    "x": { "field": "metric_value", "type": "quantitative", "title": "Selected metric" },
     "color": {
       "field": "metric_value",
       "type": "quantitative",
       "scale": { "scheme": "oranges" },
       "title": "Selected metric"
     },
-
     "tooltip": [
       { "field": "NAME", "title": "LGA" },
       { "field": "hot_num", "title": "Hot days (≥35°C)", "format": ".1f" },
