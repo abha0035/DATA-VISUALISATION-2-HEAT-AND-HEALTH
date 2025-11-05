@@ -3,7 +3,7 @@
   "description": "Trend of hot days from 2018 to 2024 by LGA (toggle series via legend).",
   "width": 680,
   "height": 260,
-  "data": { "url": "data/metric.csv", "format": { "type": "csv" } },
+  "data": { "url": "metric.csv", "format": { "type": "csv" } },
 
   "params": [
     {
