@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Heat & Health in Melbourne — Where Hot Days Meet Vulnerability</title>
+
+  <!-- Vega libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <style>
+    :root {
+      --maxw: 980px;
+      --ink: #221b15;
+      --subtle-text: #6b5d53;
+      --accent: #b9561d;
+      --accent-light: #ffcf9e;
+      --bg-soft: #faf5ef;
+    }
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body { font: 400 18px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; color:var(--ink); background:#fff; }
+
+    /* NAV */
+    nav {
+      width: 100%; background: var(--bg-soft); border-bottom: 1px solid #e3d8cb;
+      position: sticky; top: 0; z-index: 999; padding: 8px 0;
+    }
+    nav ul {
+      max-width: var(--maxw); margin: 0 auto; padding: 0; list-style: none;
+      display: flex; gap: 20px; flex-wrap: wrap; font-size: 16px;
+    }
+    nav a { text-decoration: none; color: var(--accent); font-weight: 600; }
+    nav a:hover { color: #7a320c; }
+
+    main { max-width: var(--maxw); margin: 0 auto; padding: 28px; }
+    h1, h2 { color: var(--accent); font-weight: 600; }
+    h1 { font-size: 38px; margin-top: 8px; }
+    h2 { font-size: 26px; margin: 36px 0 14px; }
+    p.lede { font-size: 20px; color:#333; margin-bottom: 16px; }
+    .byline, .meta, .explain { color: var(--subtle-text); }
+    .explain { font-size: 16px; margin: 10px 0 24px; }
+
+    .note {
+      background: var(--bg-soft); border-left: 4px solid var(--accent);
+      padding: 10px 14px; margin: 14px 0 24px; font-size: 15px;
+    }
+
+    .chart { margin: 14px 0 10px; }
+    .chart .vega-embed, .chart canvas, .chart svg { max-width: 100% !important; height: auto !important; }
+
+    .divider {
+      height: 1px; margin: 48px 0;
+      background: linear-gradient(to right, transparent, var(--accent-light), transparent);
+    }
+
+    /* Vega bound controls spacing */
+    .vega-bindings { margin: 8px 0 14px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; font-size:16px; }
+    .vega-bindings label { font-weight:600; color:#333; }
+    .vega-bindings select, .vega-bindings input[type="range"] { padding:6px 10px; font-size:15px; border:1px solid #aaa; border-radius:6px; background:#fff; }
+
+    footer.meta { margin-top: 50px; padding-bottom: 26px; }
+    @media (max-width: 640px){ nav ul { gap:10px; font-size:14px; } }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <ul>
+      <li><a href="#sec-map">LGA Heat Map</a></li>
+      <li><a href="#sec-bars">Heat Risk Ranking</a></li>
+      <li><a href="#sec-line">Trend Over Time</a></li>
+      <li><a href="#sec-state-pie">State Heat Comparison</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Heat &amp; Health in Melbourne</h1>
+    <p class="byline">Aryan Bhattacharya · 2025</p>
+    <p class="lede">
+      Some Melbourne LGAs face many more extreme-heat days than others — and where older residents are concentrated, the health risks rise.
+      This page maps hot-day frequency and shows where vulnerability is highest.
+    </p>
+
+    <div class="note">Replace CSV files in <code>/data</code> with cleaned values while keeping the same column names.</div>
+
+    <!-- MAP -->
+    <section id="sec-map">
+      <h2>Hot days per year, by LGA</h2>
+      <div id="map_viz" class="chart" aria-label="Choropleth of hot days per year by LGA"></div>
+      <p class="explain">
+        <strong>How to read:</strong> Darker areas record more hot days (≥35 °C). Western and northern LGAs heat earlier and cool slower due
+        to lower tree cover and distance from the bay. Heat clusters in these areas overlap with socio-economic vulnerability, meaning
+        communities here face greater health stress during heatwaves.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- BARS -->
+    <section id="sec-bars">
+      <h2>Where heat risk is highest (heat × % aged 65+)</h2>
+      <div id="bars_viz" class="chart" aria-label="Bars showing highest heat risk LGAs"></div>
+      <p class="explain">
+        <strong>Why this metric matters:</strong> Older adults are more susceptible to dehydration and heat-stroke. LGAs with both high heat
+        and high older populations are priority areas for cooling refuges, shading, hydration support, and proactive outreach.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- LINE -->
+    <section id="sec-line">
+      <h2>Change over time</h2>
+      <div id="line_viz" class="chart" aria-label="Line chart of hot days over time"></div>
+      <p class="explain">
+        <strong>Trend:</strong> Hot days are steadily increasing across Melbourne. More hot days extend the heat-stress season, reduce night-time
+        cooling, increase energy use, and strain vulnerable groups such as outdoor workers, children, and older adults.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PIE -->
+    <section id="sec-state-pie">
+      <h2>Heat during hot days, by state (2018)</h2>
+      <div id="state_pie_viz" class="chart" aria-label="Pie chart of mean max temp during hot-day season in 2018 by state"></div>
+      <p class="explain">
+        <strong>Context:</strong> NT, QLD and WA experience higher mean maximum heat intensity, while VIC and TAS are cooler. Heat itself does
+        not cause cancer, but it increases UV-exposure opportunities. Regions with more heat often see higher melanoma risk, reinforcing the
+        importance of shade, sunscreen, and timing prevention strategies.
+      </p>
+    </section>
+
+    <footer class="meta">
+      Sources: Bureau of Meteorology · ABS Census · Victorian Open Data · Author: Aryan Bhattacharya (2025)
+    </footer>
+  </main>
+
+  <script>
+    // Safer: target only the chart DIVS (not the whole sections)
+    const safe = (selector, spec) =>
+      vegaEmbed(selector, spec, { actions:false, renderer:"canvas" })
+        .catch(err => {
+          console.error(`Embed failed for ${spec}`, err);
+          const el = document.querySelector(selector);
+          if (el) el.textContent = "⚠️ Load error. See console.";
+        });
+
+    safe('#map_viz',       'specs/map.json');
+    safe('#bars_viz',      'specs/bars.json');
+    safe('#line_viz',      'specs/line.json');
+    safe('#state_pie_viz', 'specs/state_pie.json');
+  </script>
+</body>
+</html>
