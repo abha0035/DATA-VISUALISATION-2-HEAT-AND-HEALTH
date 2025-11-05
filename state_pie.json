@@ -4,7 +4,7 @@
   "width": 600,
   "height": 400,
 
-  "data": { "url": "data/state_heat.csv" },
+  "data": { "url": "state_heat.csv" },
 
   "transform": [
     { "filter": "toNumber(datum.year) == 2018" },
