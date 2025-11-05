@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Choropleth map showing average hot days (>=35°C) per year by LGA (2024 only).",
+  "width": 720,
+  "height": 520,
+
+  "data": {
+    "url": "data/LGA_2021_AUST_GDA2020.json",
+    "format": { "type": "topojson", "feature": "LGA_2021_AUST_GDA2020-1" }
+  },
+
+  "projection": { "type": "mercator" },
+
+  "transform": [
+    {
+      "calculate": "replace(replace(replace(datum.properties['LGA_NAME21'], ' (C)', ''), ' (S)', ''), ' (RC)', '')",
+      "as": "lga_join"
+    },
+    {
+      "lookup": "lga_join",
+      "from": {
+        "data": { "url": "data/metric.csv", "format": { "type": "csv" } },
+        "key": "NAME",
+        "fields": ["year", "hot_days", "elderly_share", "state"]
+      }
+    },
+    { "filter": "toNumber(datum.year) == 2024" }
+  ],
+
+  "mark": { "type": "geoshape" },
+
+  "encoding": {
+    "color": {
+      "field": "hot_days",
+      "type": "quantitative",
+      "title": "Hot days (≥35°C) per year",
+      "scale": { "scheme": "oranges" }
+    },
+    "tooltip": [
+      { "field": "lga_join", "title": "LGA" },
+      { "field": "hot_days", "title": "Hot days", "format": ".1f" },
+      { "field": "elderly_share", "title": "Aged 65+ (%)", "format": ".1f" }
+    ]
+  }
+}

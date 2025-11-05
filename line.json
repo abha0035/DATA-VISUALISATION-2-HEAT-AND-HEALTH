@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Trend of hot days from 2018 to 2024 by LGA (toggle series via legend).",
+  "width": 680,
+  "height": 260,
+  "data": { "url": "data/metric.csv", "format": { "type": "csv" } },
+
+  "params": [
+    {
+      "name": "pick",
+      "select": { "type": "point", "fields": ["NAME"], "toggle": "event.shiftKey", "bind": "legend" }
+    }
+  ],
+
+  "transform": [
+    { "filter": "toNumber(datum.year) >= 2018 && toNumber(datum.year) <= 2024" }
+  ],
+
+  "mark": { "type": "line", "point": true },
+
+  "encoding": {
+    "x": { "field": "year", "type": "ordinal", "title": "Year" },
+    "y": { "field": "hot_days", "type": "quantitative", "title": "Hot days (≥35°C)" },
+    "color": { "field": "NAME", "type": "nominal", "title": "LGA" },
+    "opacity": {
+      "condition": { "param": "pick", "value": 1 },
+      "value": 0.25
+    },
+    "tooltip": [
+      { "field": "NAME", "title": "LGA" },
+      { "field": "year", "title": "Year" },
+      { "field": "hot_days", "title": "Hot days", "format": ".1f" }
+    ]
+  }
+}

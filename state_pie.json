@@ -1,0 +1,44 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Clean donut pie of mean max temperature in 2018, legend only.",
+  "width": 600,
+  "height": 400,
+
+  "data": { "url": "data/state_heat.csv" },
+
+  "transform": [
+    { "filter": "toNumber(datum.year) == 2018" },
+    { "calculate": "toNumber(datum.mean_max_temp)", "as": "value" }
+  ],
+
+  "mark": {
+    "type": "arc",
+    "innerRadius": 110,
+    "stroke": "#fff",
+    "strokeWidth": 1.5
+  },
+
+  "encoding": {
+    "theta": {
+      "field": "value",
+      "type": "quantitative",
+      "stack": true,
+      "title": "Mean max temp (°C)"
+    },
+    "color": {
+      "field": "state",
+      "type": "nominal",
+      "title": "State / Territory",
+      "scale": { "scheme": "tableau10" },
+      "legend": { "orient": "right", "titleFontSize": 14, "labelFontSize": 12 }
+    },
+    "tooltip": [
+      { "field": "state", "title": "State / Territory" },
+      { "field": "value", "title": "Mean max temp (°C)", "format": ".1f" }
+    ]
+  },
+
+  "config": {
+    "view": { "stroke": null }
+  }
+}

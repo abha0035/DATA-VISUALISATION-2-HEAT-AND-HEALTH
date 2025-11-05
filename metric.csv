@@ -1,0 +1,120 @@
+NAME,year,hot_days,elderly_share,state,NAME_year
+Wyndham,2018,10.6,7.7,VIC,Wyndham-2018
+Wyndham,2019,10.9,7.7,VIC,Wyndham-2019
+Wyndham,2020,11.2,7.7,VIC,Wyndham-2020
+Wyndham,2021,11.5,7.7,VIC,Wyndham-2021
+Wyndham,2022,11.8,7.7,VIC,Wyndham-2022
+Wyndham,2023,12.1,7.7,VIC,Wyndham-2023
+Wyndham,2024,12.4,7.7,VIC,Wyndham-2024
+Melbourne,2018,6.1,9.3,VIC,Melbourne-2018
+Melbourne,2019,6.4,9.3,VIC,Melbourne-2019
+Melbourne,2020,6.7,9.3,VIC,Melbourne-2020
+Melbourne,2021,7.0,9.3,VIC,Melbourne-2021
+Melbourne,2022,7.3,9.3,VIC,Melbourne-2022
+Melbourne,2023,7.6,9.3,VIC,Melbourne-2023
+Melbourne,2024,7.9,9.3,VIC,Melbourne-2024
+Yarra,2018,5.2,11.9,VIC,Yarra-2018
+Yarra,2019,5.5,11.9,VIC,Yarra-2019
+Yarra,2020,5.8,11.9,VIC,Yarra-2020
+Yarra,2021,6.1,11.9,VIC,Yarra-2021
+Yarra,2022,6.4,11.9,VIC,Yarra-2022
+Yarra,2023,6.7,11.9,VIC,Yarra-2023
+Yarra,2024,7.0,11.9,VIC,Yarra-2024
+Port Phillip,2018,6.0,13.5,VIC,Port Phillip-2018
+Port Phillip,2019,6.3,13.5,VIC,Port Phillip-2019
+Port Phillip,2020,6.6,13.5,VIC,Port Phillip-2020
+Port Phillip,2021,6.9,13.5,VIC,Port Phillip-2021
+Port Phillip,2022,7.2,13.5,VIC,Port Phillip-2022
+Port Phillip,2023,7.5,13.5,VIC,Port Phillip-2023
+Port Phillip,2024,7.8,13.5,VIC,Port Phillip-2024
+Stonnington,2018,6.4,16.8,VIC,Stonnington-2018
+Stonnington,2019,6.7,16.8,VIC,Stonnington-2019
+Stonnington,2020,7.0,16.8,VIC,Stonnington-2020
+Stonnington,2021,7.3,16.8,VIC,Stonnington-2021
+Stonnington,2022,7.6,16.8,VIC,Stonnington-2022
+Stonnington,2023,7.9,16.8,VIC,Stonnington-2023
+Stonnington,2024,8.2,16.8,VIC,Stonnington-2024
+Moonee Valley,2018,7.5,17.3,VIC,Moonee Valley-2018
+Moonee Valley,2019,7.8,17.3,VIC,Moonee Valley-2019
+Moonee Valley,2020,8.1,17.3,VIC,Moonee Valley-2020
+Moonee Valley,2021,8.4,17.3,VIC,Moonee Valley-2021
+Moonee Valley,2022,8.7,17.3,VIC,Moonee Valley-2022
+Moonee Valley,2023,9.0,17.3,VIC,Moonee Valley-2023
+Moonee Valley,2024,9.3,17.3,VIC,Moonee Valley-2024
+Brimbank,2018,10.8,13.3,VIC,Brimbank-2018
+Brimbank,2019,11.1,13.3,VIC,Brimbank-2019
+Brimbank,2020,11.4,13.3,VIC,Brimbank-2020
+Brimbank,2021,11.7,13.3,VIC,Brimbank-2021
+Brimbank,2022,12.0,13.3,VIC,Brimbank-2022
+Brimbank,2023,12.3,13.3,VIC,Brimbank-2023
+Brimbank,2024,12.6,13.3,VIC,Brimbank-2024
+Maribyrnong,2018,6.2,10.8,VIC,Maribyrnong-2018
+Maribyrnong,2019,6.5,10.8,VIC,Maribyrnong-2019
+Maribyrnong,2020,6.8,10.8,VIC,Maribyrnong-2020
+Maribyrnong,2021,7.1,10.8,VIC,Maribyrnong-2021
+Maribyrnong,2022,7.4,10.8,VIC,Maribyrnong-2022
+Maribyrnong,2023,7.7,10.8,VIC,Maribyrnong-2023
+Maribyrnong,2024,8.0,10.8,VIC,Maribyrnong-2024
+Hobsons Bay,2018,9.0,16.1,VIC,Hobsons Bay-2018
+Hobsons Bay,2019,9.3,16.1,VIC,Hobsons Bay-2019
+Hobsons Bay,2020,9.6,16.1,VIC,Hobsons Bay-2020
+Hobsons Bay,2021,9.9,16.1,VIC,Hobsons Bay-2021
+Hobsons Bay,2022,10.2,16.1,VIC,Hobsons Bay-2022
+Hobsons Bay,2023,10.5,16.1,VIC,Hobsons Bay-2023
+Hobsons Bay,2024,10.8,16.1,VIC,Hobsons Bay-2024
+Melton,2018,10.6,9.2,VIC,Melton-2018
+Melton,2019,10.9,9.2,VIC,Melton-2019
+Melton,2020,11.2,9.2,VIC,Melton-2020
+Melton,2021,11.5,9.2,VIC,Melton-2021
+Melton,2022,11.8,9.2,VIC,Melton-2022
+Melton,2023,12.1,9.2,VIC,Melton-2023
+Melton,2024,12.4,9.2,VIC,Melton-2024
+Kingston,2018,7.4,18.6,VIC,Kingston-2018
+Kingston,2019,7.7,18.6,VIC,Kingston-2019
+Kingston,2020,8.0,18.6,VIC,Kingston-2020
+Kingston,2021,8.3,18.6,VIC,Kingston-2021
+Kingston,2022,8.6,18.6,VIC,Kingston-2022
+Kingston,2023,8.9,18.6,VIC,Kingston-2023
+Kingston,2024,9.2,18.6,VIC,Kingston-2024
+Bayside,2018,6.5,21.2,VIC,Bayside-2018
+Bayside,2019,6.8,21.2,VIC,Bayside-2019
+Bayside,2020,7.1,21.2,VIC,Bayside-2020
+Bayside,2021,7.4,21.2,VIC,Bayside-2021
+Bayside,2022,7.7,21.2,VIC,Bayside-2022
+Bayside,2023,8.0,21.2,VIC,Bayside-2023
+Bayside,2024,8.3,21.2,VIC,Bayside-2024
+Glen Eira,2018,6.9,16.4,VIC,Glen Eira-2018
+Glen Eira,2019,7.2,16.4,VIC,Glen Eira-2019
+Glen Eira,2020,7.5,16.4,VIC,Glen Eira-2020
+Glen Eira,2021,7.8,16.4,VIC,Glen Eira-2021
+Glen Eira,2022,8.1,16.4,VIC,Glen Eira-2022
+Glen Eira,2023,8.4,16.4,VIC,Glen Eira-2023
+Glen Eira,2024,8.7,16.4,VIC,Glen Eira-2024
+Monash,2018,8.6,18.3,VIC,Monash-2018
+Monash,2019,8.9,18.3,VIC,Monash-2019
+Monash,2020,9.2,18.3,VIC,Monash-2020
+Monash,2021,9.5,18.3,VIC,Monash-2021
+Monash,2022,9.8,18.3,VIC,Monash-2022
+Monash,2023,10.1,18.3,VIC,Monash-2023
+Monash,2024,10.4,18.3,VIC,Monash-2024
+Knox,2018,8.3,17.8,VIC,Knox-2018
+Knox,2019,8.6,17.8,VIC,Knox-2019
+Knox,2020,8.9,17.8,VIC,Knox-2020
+Knox,2021,9.2,17.8,VIC,Knox-2021
+Knox,2022,9.5,17.8,VIC,Knox-2022
+Knox,2023,9.8,17.8,VIC,Knox-2023
+Knox,2024,10.1,17.8,VIC,Knox-2024
+Maroondah,2018,8.0,17.6,VIC,Maroondah-2018
+Maroondah,2019,8.3,17.6,VIC,Maroondah-2019
+Maroondah,2020,8.6,17.6,VIC,Maroondah-2020
+Maroondah,2021,8.9,17.6,VIC,Maroondah-2021
+Maroondah,2022,9.2,17.6,VIC,Maroondah-2022
+Maroondah,2023,9.5,17.6,VIC,Maroondah-2023
+Maroondah,2024,9.8,17.6,VIC,Maroondah-2024
+Boroondara,2018,5.6,18.3,VIC,Boroondara-2018
+Boroondara,2019,5.9,18.3,VIC,Boroondara-2019
+Boroondara,2020,6.2,18.3,VIC,Boroondara-2020
+Boroondara,2021,6.5,18.3,VIC,Boroondara-2021
+Boroondara,2022,6.8,18.3,VIC,Boroondara-2022
+Boroondara,2023,7.1,18.3,VIC,Boroondara-2023
+Boroondara,2024,7.4,18.3,VIC,Boroondara-2024
