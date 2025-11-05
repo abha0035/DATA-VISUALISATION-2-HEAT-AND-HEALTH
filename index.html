@@ -149,10 +149,11 @@
           if (el) el.textContent = "⚠️ Load error. See console.";
         });
 
-    safe('#map_viz',       'specs/map.json');
-    safe('#bars_viz',      'specs/bars.json');
-    safe('#line_viz',      'specs/line.json');
-    safe('#state_pie_viz', 'specs/state_pie.json');
+    // Paths fixed to root-level files
+    safe('#map_viz',       'map.json');
+    safe('#bars_viz',      'bars.json');
+    safe('#line_viz',      'line.json');
+    safe('#state_pie_viz', 'state_pie.json');
   </script>
 </body>
 </html>
